@@ -25,5 +25,12 @@ Projeto de classificação com python com dataset de vinhos do Sklearn.
 * OD280/OD315 of diluted wines
 * Proline
 
+## Instalação
+* pip3 install pandas
+* pip3 install sklearn
+* pip3 install matplotlib
+* pip3 install numpy
+* pip3 install pyswarms
+
 
 
