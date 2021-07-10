@@ -3,6 +3,7 @@ Utilização de Metaheurísticas no treinamento de redes neurais artificiais.
 Projeto de classificação com python com dataset de vinhos do Sklearn.
 
 ## Características do conjunto de dados
+|Caracteristicas||
 |:-----|:----:|
 |Classes|3|
 |Número de instâncias|178|
