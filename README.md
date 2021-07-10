@@ -10,7 +10,7 @@ Projeto de classificação com python com dataset de vinhos do Sklearn.
 |Instâncias por classe|[59,71,48]|
 |Dimensão|13|
 
-#Informação dos atributos
+> Informação dos atributos
 * Alcohol
 * Malic acid
 * Ash
