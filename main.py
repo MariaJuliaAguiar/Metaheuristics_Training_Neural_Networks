@@ -56,7 +56,7 @@ if __name__ == '__main__':
     #Simulation Parameters
 
     number_runs = 1
-    number_iterations = 1000
+    number_iterations = 2
     dimensions = (n_inputs * n_hidden) + (n_hidden * n_hidden)+(n_hidden*n_classes) + 2*n_hidden + n_classes
 
     population_size = 100
@@ -107,16 +107,19 @@ if __name__ == '__main__':
     # Save Results
     results_path = "./results/"
     print("\n")
-    #Acuuracy
+    #Accuracy
     min_ind_PSO = np.argmin(best_pso)
     acc_PSO = (nn.predict(best_sim_pso[min_ind_PSO],X_test) ==y_test).mean()
     print("PSO Accuracy: " + str(acc_PSO))
+    print("PSO Best fitness:" + str(best_pso[min_ind_PSO]))
 
     
     min_ind_Gwo = np.argmin(best_gwo)
     acc_GWO = (nn.predict(best_sim_gwo[min_ind_Gwo],X_test) ==y_test).mean()
     print(" \nGWO Accuracy: " + str(acc_GWO))
+    print("Gwo Best fitness:" + str(best_gwo[min_ind_PSO]))
 
+   
     # Convergence curves - Plots
     numpy_array_PSO = np.array(hist_sim_pso)
     transpose_PSO = numpy_array_PSO.T
@@ -138,7 +141,11 @@ if __name__ == '__main__':
     plt.close()
     
     # Best model - weigths and baias
-    
+     # Save Weigths and baias
+    best_PSO  = pd.DataFrame(best_sim_pso[min_ind_PSO],columns =['BestPSO'])
+    best_PSO.to_excel(results_path +"Best_PSO.xlsx")
+    best_GWO  = pd.DataFrame(best_sim_gwo[min_ind_Gwo],columns =['BestGWO'])
+    best_GWO.to_excel(results_path + "best_GWO.xlsx")
     tempoExec = time.time() - t1
     print("Tempo de execução: {} segundos".format(tempoExec))
     print("Fimm")
