@@ -1,6 +1,6 @@
 # Metaheuristics_Training_Neural_Networks
 Utilização de Metaheurísticas no treinamento de redes neurais artificiais.
-Projeto de classificação com python com dataset de vinhos do Sklearn.
+Projeto de classificação com python utilizando o dataset de vinhos do Sklearn.
 
 ## Características do conjunto de dados
 |Características||
